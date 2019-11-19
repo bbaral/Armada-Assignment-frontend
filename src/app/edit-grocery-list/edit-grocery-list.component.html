@@ -1,0 +1,39 @@
+<form [formGroup]="EditListForm" (ngSubmit)="updateCurrentRow()">
+  <mat-dialog-content>
+
+    <mat-form-field appearance="outline">
+      <mat-label>ID</mat-label>
+      <input type="number" aria-label="Number" matInput formControlName="_id" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input type="number" aria-label="Number" matInput formControlName="name" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Number of Units</mat-label>
+      <input matInput formControlName="numberOfUnits" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Price/Unit</mat-label>
+      <input matInput formControlName="pricePerUnit" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Total Amount</mat-label>
+      <input matInput formControlName="totalAmount" >
+    </mat-form-field>
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button type="submit" mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!EditListForm.valid" (click)="updateCurrentRow()">Update</button>
+    <button type="submit" mat-raised-button color="default" [mat-dialog-close]="false" (click)="cancelClick()" >Cancel</button>
+  </mat-dialog-actions>
+</form>
