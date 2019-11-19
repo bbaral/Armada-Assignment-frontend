@@ -1,0 +1,18 @@
+<div class="message-container">
+  <mat-toolbar color="primary">
+    <h2 mat-dialog-title>
+      <mat-icon aria-hidden="false" aria-label="Example home icon">{{dialogType}}</mat-icon>
+      <span [ngStyle]="{'margin-left.px': '3'}">{{dialogTitle}}</span>
+    </h2>
+  </mat-toolbar>
+  <div class="custom-dialog">
+    <mat-dialog-content>
+      <p>
+        {{dialogMessage}}
+      </p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-raised-button color="primary" [mat-dialog-close]="true">{{dialogButton}}</button>
+    </mat-dialog-actions>
+  </div>
+</div>
