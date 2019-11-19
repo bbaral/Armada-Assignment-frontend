@@ -6,8 +6,7 @@ import {EditGroceryListComponent} from "./edit-grocery-list/edit-grocery-list.co
 
 const routes: Routes = [
   {path: 'grocery/getAllList', component: GroceryListComponent},
-  {path: '', redirectTo: '/grocery/getAllList', pathMatch: 'full'},
-  {path: 'grocery/updateList', component: EditGroceryListComponent}
+  {path: '', redirectTo: '/grocery/getAllList', pathMatch: 'full'}
 ];
 
 @NgModule({
