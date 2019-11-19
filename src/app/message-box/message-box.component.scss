@@ -1,0 +1,27 @@
+.message-container {
+  padding: 0 !important;
+  height: 200px;
+  margin: -24px !important;
+  overflow: hidden;
+  background: #ebedef;
+  width: 391px;
+}
+
+.message-container > mat-toolbar {
+  height: 40px;
+}
+
+.message-container .custom-dialog > mat-dialog-content {
+  margin: 0 auto;
+}
+
+mat-toolbar {
+  height: 40px;
+  text-align: center;
+}
+
+mat-dialog-actions {
+  margin-right: 10px;
+  float: right;
+  margin-top: 27px !important;
+}
