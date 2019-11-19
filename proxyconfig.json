@@ -1,0 +1,26 @@
+{
+  "server": {
+    "target": "http://localhost:8080/grocery",
+    "secure": false,
+    "baseDir": "./dist",
+    "serveStaticOptions": {
+      "extensions": [
+        "html",
+        "css",
+        "ttf",
+        "woff",
+        "eot",
+        "png",
+        "svg",
+        "gif",
+        "bmp"
+      ]
+    }
+  },
+  "open": false,
+  "watchOptions": {
+    "ignoreInitial": true,
+    "ignored": "*.*"
+  },
+  "files": ["./dist"]
+}
