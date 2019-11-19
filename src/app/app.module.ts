@@ -9,15 +9,18 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import {GroceryListService} from './service/grocery-list.service';
-import { SidenavContainerComponent } from './sidenav-container/sidenav-container.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { EditGroceryListComponent } from './edit-grocery-list/edit-grocery-list.component';
+import { MessageBoxComponent } from './message-box/message-box.component';
+import {MessageBoxService} from "./service/message-box.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     GroceryListComponent,
-    SidenavContainerComponent
+    EditGroceryListComponent,
+    MessageBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [GroceryListService],
-  bootstrap: [AppComponent]
+  providers: [GroceryListService, MessageBoxService],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    MessageBoxComponent
+  ]
 })
 export class AppModule { }
