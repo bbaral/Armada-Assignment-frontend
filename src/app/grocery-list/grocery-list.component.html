@@ -1,1 +1,62 @@
-<p>grocery-list works!</p>
+
+<div class="grocery-table" fxFlex fxLayout fxLayoutAlign="center">
+  <mat-card class="grocery-container-table">
+    <mat-card-title>Grocery List Cart</mat-card-title>
+    <mat-card-subtitle>Your total items are as belows. if you are not happy with the item. Feel free to modify. Thank you for shopping with us!
+    </mat-card-subtitle>
+    <mat-card-content>
+<div class="example-container mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef> ID</th>
+      <td mat-cell *matCellDef="let element"> {{element._id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="quantities">
+      <th mat-header-cell *matHeaderCellDef> Quantities </th>
+      <td mat-cell *matCellDef="let element"> {{element.quantities}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="numberOfUnits">
+      <th mat-header-cell *matHeaderCellDef> Number of Units </th>
+      <td mat-cell *matCellDef="let element"> {{element.numberOfUnits}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pricePerUnit">
+      <th mat-header-cell *matHeaderCellDef> Price/Unit </th>
+      <td mat-cell *matCellDef="let element"> {{element.pricePerUnit}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalAmount">
+      <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+      <td mat-cell *matCellDef="let element"> {{element.totalAmount}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef > Action </th>
+      <td mat-cell *matCellDef="let element; let i = index">
+        <button mat-button [routerLink]="['/grocery/', editRoute]" (click)="editCurrentRow(element,i)" >
+          <mat-icon >edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator class="mat-paginator-sticky" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+    </mat-card-content>
+  </mat-card>
+</div>
