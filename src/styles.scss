@@ -1,5 +1,7 @@
-
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* You can add global styles to this file, and also import other style files */
+
 @import "~@angular/material/theming";
 
 // Include non-theme styles for core.
@@ -39,7 +41,7 @@ $mat-custom-theme: (
 );
 
 // Define a theme.
-$primary: mat-palette($mat-custom-theme);
+$primary: mat-palette($mat-blue-grey);
 $accent:  mat-palette($mat-pink, A200, A100, A400);
 
 $theme: mat-light-theme($primary, $accent);
@@ -47,13 +49,18 @@ $theme: mat-light-theme($primary, $accent);
 // Include all theme styles for the components.
 @include angular-material-theme($theme);
 
+
 html, body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
 }
 
 body {
-  margin: 0;
   background-color: #c6c6c6;
+  margin: 0;
   -webkit-text-size-adjust: none;
+}
+
+mat-spinner {
+  margin: -239px auto;
 }
