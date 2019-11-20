@@ -36,3 +36,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 6. After doing first 5 steps. Go ahead and clone [Backend Spring boot rep](https://github.com/bbaral/Armada-Assignment-backend). Navigate to downloaded folder and run ```gradle install``` via terminal or CMD and after finish installing again run ```gradle build```. 
 6. You should see message ```BUILD SUCCESSFUL```. After that run ```./gradlew bootRun```. if everything goes well, you should see UI like below
 
+
+![Image of grocerylistApp](https://github.com/bbaral/Armada-Assignment-frontend/blob/master/src/assets/Screen%20Shot%202019-11-19%20at%209.42.48%20PM.png)
