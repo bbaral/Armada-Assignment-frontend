@@ -44,7 +44,7 @@ export class EditGroceryListComponent implements OnInit {
       numberOfUnits: this.EditListForm.value.numberOfUnits,
       pricePerUnit: this.EditListForm.value.pricePerUnit,
       totalAmount: this.EditListForm.value.totalAmount
-    });
+    }).subscribe();
   }
 
   cancelClick() {

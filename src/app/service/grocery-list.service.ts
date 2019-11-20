@@ -41,6 +41,7 @@ export class GroceryListService {
         pricePerUnit: incomingData.pricePerUnit,
         totalAmount: incomingData.totalAmount
       }, httpOptions).pipe(
+        tap(() => console.log('Http Executed')),
       map((res: GroceryListModal) => {
         shareReplay();
         return res;
