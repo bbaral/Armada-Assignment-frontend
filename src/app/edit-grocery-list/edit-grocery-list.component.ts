@@ -2,7 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {GroceryListService} from "../service/grocery-list.service";
-import {GroceryListModal} from "../model/GroceryListModal";
+import {GroceryListModal} from '../model/groceryListModel';
 
 @Component({
   selector: 'app-edit-grocery-list',

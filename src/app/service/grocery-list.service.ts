@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {GroceryListModal} from '../model/GroceryListModal';
 import {environment} from '../../environments/environment';
 import {map, shareReplay, tap} from 'rxjs/operators';
+import {GroceryListModal} from '../model/groceryListModel';
 
 
 const httpOptions = {
@@ -22,7 +22,7 @@ export class GroceryListService {
   constructor(private http: HttpClient) { }
 
   getAllData() {
-    return this.http.get<GroceryListModal[]>(this.EndPoint + '/getAllList', httpOptions).
+    return this.http.get<GroceryListModal[]>(this.EndPoint + '/grocery/getAllList', httpOptions).
     pipe(
       map((response: any) => {
         return response;

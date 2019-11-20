@@ -1,12 +1,12 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-import {GroceryListModal} from '../model/GroceryListModal';
 import {Observable, Subscription} from 'rxjs';
 import {GroceryListService} from '../service/grocery-list.service';
 import {MatDialog} from "@angular/material/dialog";
 import {EditGroceryListComponent} from "../edit-grocery-list/edit-grocery-list.component";
 import {MessageBoxService} from "../service/message-box.service";
+import {GroceryListModal} from '../model/groceryListModel';
 
 @Component({
   selector: 'app-grocery-list',

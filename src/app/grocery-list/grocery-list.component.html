@@ -46,7 +46,7 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef > Action </th>
       <td mat-cell *matCellDef="let element; let i = index">
-        <button mat-button [routerLink]="['/grocery/', editRoute]" (click)="editCurrentRow(element,i)" >
+        <button mat-button [routerLink]="['/grocery', editRoute]" (click)="editCurrentRow(element,i)" >
           <mat-icon >edit</mat-icon>
         </button>
       </td>
