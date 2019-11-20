@@ -35,7 +35,8 @@ import {MessageBoxService} from "./service/message-box.service";
   providers: [GroceryListService, MessageBoxService],
   bootstrap: [AppComponent],
   entryComponents: [
-    MessageBoxComponent
+    MessageBoxComponent,
+    EditGroceryListComponent
   ]
 })
 export class AppModule { }
