@@ -29,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Environment setup to run the application
 ***
 1. Install Angular CLI from [Angular Official Website](https://cli.angular.io/)
-2. This application use mongoDB for storing and fetching data. Therefore you gonna want to install MongoDB as well from MongoDB Official Website(https://docs.mongodb.com/v3.2/administration/install-community/).
+2. This application use mongoDB for storing and fetching data. Therefore you gonna want to install MongoDB as well from [MongoDB Official Website](https://docs.mongodb.com/v3.2/administration/install-community/).
 3. Once you download MongoDB. Go ahead and create DB call **groceryApp** (camelcase matters) and then create Collection with a name _groceryList_
 4. Once you done setting up first 3 Clone this repo and run ```npm install``` in that download repo directory.
 5. Lastly run ```ng serve``` and navigate to ```http://localhost:4200```
