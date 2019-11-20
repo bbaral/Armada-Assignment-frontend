@@ -3,12 +3,17 @@
 
     <mat-form-field appearance="outline">
       <mat-label>ID</mat-label>
-      <input  matInput formControlName="_id" >
+      <input  matInput formControlName="_id" [readonly]="true">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Name</mat-label>
       <input matInput formControlName="name" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Quantities</mat-label>
+      <input matInput formControlName="quantities" >
     </mat-form-field>
 
     <mat-form-field appearance="outline">

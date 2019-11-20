@@ -24,6 +24,7 @@ export class EditGroceryListComponent implements OnInit {
     this.EditListForm = formBuilder.group({
       _id: [this.tempDataHolder._id],
       name: [this.tempDataHolder.name],
+      quantities: [this.tempDataHolder.quantities],
       description: [this.tempDataHolder.description],
       numberOfUnits: [this.tempDataHolder.numberOfUnits],
       pricePerUnit: [this.tempDataHolder.pricePerUnit],
@@ -36,9 +37,13 @@ export class EditGroceryListComponent implements OnInit {
 
   updateCurrentRow() {
     this.groceryListService.updateListData({
+      _id: this.EditListForm.value._id,
+      name: this.EditListForm.value.name,
       quantities: this.EditListForm.value.quantities,
+      description: this.EditListForm.value.description,
       numberOfUnits: this.EditListForm.value.numberOfUnits,
       pricePerUnit: this.EditListForm.value.pricePerUnit,
+      totalAmount: this.EditListForm.value.totalAmount
     });
   }
 

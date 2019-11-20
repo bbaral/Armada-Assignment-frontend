@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {map, shareReplay, tap} from 'rxjs/operators';
@@ -16,30 +16,34 @@ const httpOptions = {
 export class GroceryListService {
 
   private EndPoint: string = environment.EndpointAPI;
-  private Modal: { numberOfUnits: any; quantities: any; pricePerUnit: any };
+  private Modal: {_id: any, name: any, quantities: any; description: any,  numberOfUnits: any; pricePerUnit: any, totalAmount: any};
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getAllData() {
-    return this.http.get<GroceryListModal[]>(this.EndPoint + '/grocery/getAllList', httpOptions).
-    pipe(
+    return this.http.get<GroceryListModal[]>(this.EndPoint + '/grocery/getAllList', httpOptions).pipe(
       map((response: any) => {
         return response;
       })
     );
   }
 
-  updateListData(incomingData: {quantities?: any, numberOfUnits?: any, pricePerUnit?: any}) {
+  updateListData(incomingData: { _id?: any, name?: any, quantities?: any, description?: any, numberOfUnits?: any, pricePerUnit?: any, totalAmount?: any }) {
     return this.http.post<any>(this.EndPoint + '/grocery/updateList',
       this.Modal = {
-      quantities: incomingData.quantities,
+        _id: incomingData._id,
+        name: incomingData.name,
+        quantities: incomingData.quantities,
+        description: incomingData.description,
         numberOfUnits: incomingData.numberOfUnits,
-        pricePerUnit: incomingData.pricePerUnit
-      }).pipe(
-        map((res: GroceryListModal) => {
-          shareReplay();
-          return res;
-        }));
+        pricePerUnit: incomingData.pricePerUnit,
+        totalAmount: incomingData.totalAmount
+      }, httpOptions).pipe(
+      map((res: GroceryListModal) => {
+        shareReplay();
+        return res;
+      }));
   }
 }

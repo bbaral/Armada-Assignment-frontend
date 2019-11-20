@@ -73,6 +73,7 @@
       false,
       "single"
     ],
+    "no-trailing-whitespace": false,
     "trailing-comma": false,
     "no-conflicting-lifecycle": false,
     "no-host-metadata-property": false,
