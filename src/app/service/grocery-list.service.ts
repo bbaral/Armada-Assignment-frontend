@@ -31,7 +31,7 @@ export class GroceryListService {
   }
 
   updateListData(incomingData: {quantities?: any, numberOfUnits?: any, pricePerUnit?: any}) {
-    return this.http.post<any>(this.EndPoint + '/updateList',
+    return this.http.post<any>(this.EndPoint + '/grocery/updateList',
       this.Modal = {
       quantities: incomingData.quantities,
         numberOfUnits: incomingData.numberOfUnits,
