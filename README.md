@@ -33,4 +33,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Once you download MongoDB. Go ahead and create DB call **groceryApp** (camelcase matters) and then create Collection with a name _groceryList_
 4. Once you done setting up first 3 Clone this repo and run ```npm install``` in that download repo directory.
 5. Lastly run ```ng serve``` and navigate to ```http://localhost:4200```
-6. 
+6. After doing first 5 steps. Go ahead and clone [Backend Spring boot rep](https://github.com/bbaral/Armada-Assignment-backend). Navigate to downloaded folder and run ```gradle install``` and after finish installing again run ```gradle build```. 
+
